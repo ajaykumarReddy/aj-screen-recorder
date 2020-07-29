@@ -8,7 +8,9 @@ import { AjScreenRecoderComponent } from 'aj-screen-recoder';
 })
 export class AppComponent {
   @ViewChild(AjScreenRecoderComponent) startRecordElm: AjScreenRecoderComponent;
-  
+  @ViewChild('video') video: ElementRef;
+  videoData: any;
+
   startRecord() {
    this.startRecordElm.startRecorder();
   }
@@ -25,5 +27,10 @@ export class AppComponent {
     this.startRecordElm.getBlobObject();
   }
 
-  
+  play() {
+    const videoData = this.startRecordElm.getVideoStreamURL();
+    this.video.nativeElement.srcObject = URL.createObjectURL(videoData);
+  }
+
+
 }

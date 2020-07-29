@@ -1,6 +1,13 @@
 <div>
     <button (click)="startRecord()">Start</button>
     <button (click)="stopRecord()">Stop</button>
+    <button (click)="play()">Play</button>
+    <button (click)="getTheBlob()">Get Blob</button>
     <button (click)="downloadVideo()">Download</button>
     <aj-screen-recoder #screenRecorder></aj-screen-recoder>
+</div>
+ <br>
+ <br>
+<div>
+   <video #video width="200" height="200" controls autoplay></video>
 </div>
