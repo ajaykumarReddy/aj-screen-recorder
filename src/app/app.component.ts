@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { AjScreenRecoderComponent } from 'aj-screen-recoder';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aj-screen-rec';
+  @ViewChild(AjScreenRecoderComponent) startRecordElm: AjScreenRecoderComponent;
+  
+  startRecord() {
+   this.startRecordElm.startRecorder();
+  }
+
+  stopRecord() {
+    this.startRecordElm.stopRecording();
+  }
+
+  downloadVideo() {
+    this.startRecordElm.download();
+  }
+
+  getTheBlob() {
+    this.startRecordElm.getBlobObject();
+  }
+
+  
 }

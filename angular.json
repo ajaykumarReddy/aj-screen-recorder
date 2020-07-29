@@ -119,6 +119,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "aj-screen-rec"
+    },
+    "aj-screen-recoder": {
+      "projectType": "library",
+      "root": "projects/aj-screen-recoder",
+      "sourceRoot": "projects/aj-screen-recoder/src",
+      "prefix": "aj",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/aj-screen-recoder/tsconfig.lib.json",
+            "project": "projects/aj-screen-recoder/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/aj-screen-recoder/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/aj-screen-recoder/src/test.ts",
+            "tsConfig": "projects/aj-screen-recoder/tsconfig.spec.json",
+            "karmaConfig": "projects/aj-screen-recoder/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/aj-screen-recoder/tsconfig.lib.json",
+              "projects/aj-screen-recoder/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "aj-screen-rec",
+  "cli": {
+    "analytics": false
+  }
 }

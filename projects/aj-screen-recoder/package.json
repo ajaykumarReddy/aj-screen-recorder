@@ -1,0 +1,27 @@
+{
+  "name": "aj-screen-recoder",
+  "version": "0.0.2",
+  "description": "Angular library to record screen sharing.",
+  "homepage": "https://github.com/ajaykumarReddy/aj-screen-recorder.git",
+  "keywords": [
+    "screen",
+    "recorder",
+    "screen sharing",
+    "capture",
+    "browser window capture",
+    "WebRTO screen recoder"
+  ],
+  "author": "Ajay Chagam <ajaychagam@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajaykumarReddy/aj-screen-recorder.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.12",
+    "@angular/core": "^9.1.12"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}

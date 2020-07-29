@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "aj-screen-recoder": [
+        "dist/aj-screen-recoder/aj-screen-recoder",
+        "dist/aj-screen-recoder"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
